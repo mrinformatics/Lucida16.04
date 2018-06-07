@@ -1,6 +1,6 @@
 ####
 # Builds the lucida base image
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 #### environment variables
 ENV LUCIDAROOT /usr/local/lucida/lucida
