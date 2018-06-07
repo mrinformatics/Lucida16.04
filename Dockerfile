@@ -29,6 +29,12 @@ RUN apt-get remove gcc g++
 RUN apt-get install -y gcc-4.8 g++-4.8
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
 RUN apt-get update
+RUN apt-get install software-properties-common
+RUN add-apt-repository ppa:george-edison55/cmake-3.x
+RUN apt-get update
+RUN apt-get install -y cmake
+RUN apt-get upgrade
+RUN apt-get update
 RUN /bin/bash apt_deps.sh
 RUN /bin/bash install_python.sh
 RUN /bin/bash install_java.sh
