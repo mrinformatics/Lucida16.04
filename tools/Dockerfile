@@ -16,6 +16,10 @@ ENV JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 #### common package installations
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
 RUN apt-get update
+RUN apt-get remove gcc g++
+RUN apt-get install gcc-4.8 g++-4.8
+RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+RUN apt-get update
 RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y libatlas3-base
 RUN apt-get install -y python2.7-dev
