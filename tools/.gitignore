@@ -1,0 +1,12 @@
+fbthrift/
+localpython2_7_12/
+mongo-c-driver/
+mongo-cxx-driver/
+opencv-2.4/
+python_2_7_12/
+Python-2.7.12/
+thrift-0.9.3/
+wiki_indri_index/
+*.tgz
+*.tar.gz
+
