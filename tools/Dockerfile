@@ -50,11 +50,6 @@ RUN apt-get install -y libatlas-dev
 RUN apt-get install -y libatlas-base-dev
 RUN apt-get install -y libiberty-dev
 RUN apt-get install -y liblapack-dev
-RUN apt-get install software-properties-common
-RUN add-apt-repository ppa:george-edison55/cmake-3.x
-RUN apt-get update
-RUN apt-get install -y cmake
-RUN apt-get upgrade
 RUN apt-get install -y zip
 RUN apt-get install -y unzip
 RUN apt-get install -y sox
