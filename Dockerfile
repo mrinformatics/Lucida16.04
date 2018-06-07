@@ -1,6 +1,6 @@
 ####
 # Builds the lucida base image
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 #### environment variables
 ENV LUCIDAROOT /usr/local/lucida/lucida
@@ -25,6 +25,10 @@ RUN apt-get install -y make
 RUN mkdir -p /usr/local/lucida
 ADD . /usr/local/lucida
 WORKDIR "/usr/local/lucida/tools"
+RUN apt-get remove gcc g++
+RUN apt-get install gcc-4.8 g++-4.8
+RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+RUN apt-get update
 RUN /bin/bash apt_deps.sh
 RUN /bin/bash install_python.sh
 RUN /bin/bash install_java.sh
