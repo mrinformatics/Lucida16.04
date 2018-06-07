@@ -1,6 +1,6 @@
 #!/bin/bash
 ## Installs all package manager dependencies
-## FROM ubuntu:14.04
+## FROM ubuntu:16.04
 
 apt-get update
 ln -s -f bash /bin/sh
@@ -17,8 +17,6 @@ apt-get install -y zlib1g-dev \
                    gfortran \
                    make \
                    ant \
-                   gcc \
-                   g++ \
                    wget \
                    automake \
                    git \
@@ -40,7 +38,6 @@ apt-get install -y zlib1g-dev \
                    libatlas-base-dev \
                    libiberty-dev \
                    liblapack-dev \
-                   cmake \
                    zip \
                    unzip \
                    sox \
